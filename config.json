@@ -1,20 +1,20 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "readmeUrl": "https://raw.githubusercontent.com/dtannen/Commands.com/main/README.md",
+  "title": "Commands.com",
+  "name": "David Tannenbaum",
+  "ascii": "Commands.com",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "dtannen",
+    "linkedin": "david-tannenbaum-98b161"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
+  "email": "admin@commands.com",
+  "ps1_hostname": "commands.com",
   "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "repo": "https://github.com/dtannen/Commands.com",
+  "resume_url": "https://angel.co/u/david-tannenbaum-2",
   "donate_urls": {
-    "paypal": "https://paypal.me/cveinnt",
-    "patreon": "https://patreon.com/cveinnt"
+    "paypal": "https://paypal.me/commandscom",
+    "patreon": ""
   },
   "colors": {
     "light": {

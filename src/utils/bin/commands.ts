@@ -30,7 +30,7 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
+  return `Hi, I am ${config.name}.
 Welcome to my website!
 More about me:
 'sumfetch' - short summary.
@@ -45,10 +45,9 @@ export const resume = async (args: string[]): Promise<string> => {
 
 // Donate
 export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
+  return `thank you for your interest.
 here are the ways you can support my work:
 - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
 `;
 };
 
@@ -141,17 +140,17 @@ export const sudo = async (args?: string[]): Promise<string> => {
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
+8""""8
+8    " eeeee eeeeeee eeeeeee eeeee eeeee eeeee eeeee    eeee eeeee eeeeeee
+8e     8  88 8  8  8 8  8  8 8   8 8   8 8   8 8   "    8  8 8  88 8  8  8
+88     8   8 8e 8  8 8e 8  8 8eee8 8e  8 8e  8 8eeee    8e   8   8 8e 8  8
+88   e 8   8 88 8  8 88 8  8 88  8 88  8 88  8    88    88   8   8 88 8  8
+88eee8 8eee8 88 8  8 88 8  8 88  8 88  8 88ee8 8ee88 88 88e8 8eee8 88 8  8
 
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
+
+Please contribute new commands as pull requests to the github repo.
 `;
 };

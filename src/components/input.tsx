@@ -42,6 +42,9 @@ export const Input = ({
       setLastCommandIndex(0);
       await shell(command, setHistory, clearHistory, setCommand);
       containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+      setTimeout(function() {
+        containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+      }, 100);
     }
 
     if (event.key === 'ArrowUp') {

@@ -4,6 +4,10 @@ import { getProjects } from '../api';
 import { getQuote } from '../api';
 import { getReadme } from '../api';
 import { getWeather } from '../api';
+import { getStockPrice } from '../api';
+
+var yahooService = require('../../services/yahooService');
+var responseTransformer = require('../../transformer/responseTransformer');
 
 export const projects = async (args: string[]): Promise<string> => {
   const projects = await getProjects();
@@ -33,4 +37,15 @@ export const weather = async (args: string[]): Promise<string> => {
   }
   const weather = await getWeather(city);
   return weather;
+};
+
+export const stock = async (args: string[]): Promise<string> => {
+  const stock = args.join('+');
+  if (!stock) {
+    return 'Usage: stock [ticker]. Example: stock AAPL';
+  }
+  stock = stock.toUpperCase();
+  const tickers = stock.split(',').map((ticker) => ticker.trim());
+  const quote_data = await yahooService.getCurrentPrice(tickers);
+  return responseTransformer.transformCurrentPrice(quote_data);
 };

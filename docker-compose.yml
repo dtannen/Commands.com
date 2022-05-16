@@ -12,3 +12,11 @@ services:
     volumes:
       - ./src/:/home/node/app/src
     command: npm run dev
+  cors-anywhere:
+    image: redocly/cors-anywhere
+    environment:
+      - CORSANYWHERE_WHITELIST=http://localhost:3000,https://localhost:3000,https://commands.com,http://commands.com
+    ports:
+      - "8080:8080"
+    expose:
+      - '8080'
