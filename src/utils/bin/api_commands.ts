@@ -44,7 +44,7 @@ export const stock = async (args: string[]): Promise<string> => {
   if (!stock) {
     return 'Usage: stock [ticker]. Example: stock AAPL';
   }
-  stock = stock.toUpperCase();
+  stock = stock.toUpperCase().replaceAll(/\+/g,'');
   const tickers = stock.split(',').map((ticker) => ticker.trim());
   const quote_data = await yahooService.getCurrentPrice(tickers);
   return responseTransformer.transformCurrentPrice(quote_data);
