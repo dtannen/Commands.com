@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  commandscom:
+    image: dtannen/commandscom
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    expose:
+      - '3000'
+    ports:
+      - target: 3000
+        x-aws-protocol: http
+    command: npm run dev
+  cors-anywhere:
+    image: redocly/cors-anywhere
+    environment:
+      - CORSANYWHERE_WHITELIST=http://localhost:3000,https://localhost:3000,https://commands.com,http://commands.com
+    ports:
+      - target: 8080
+        x-aws-protocol: http 
+    expose:
+      - '8080'
