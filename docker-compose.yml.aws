@@ -15,7 +15,7 @@ services:
   cors-anywhere:
     image: redocly/cors-anywhere
     environment:
-      - CORSANYWHERE_WHITELIST=http://localhost:3000,https://localhost:3000,https://commands.com,http://commands.com
+      - CORSANYWHERE_WHITELIST=https://www.commands.com,https://commands.com
     ports:
       - target: 8080
         x-aws-protocol: http 
